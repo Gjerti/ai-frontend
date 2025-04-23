@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Assistant</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/medical-ai.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="video-background">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="videos/video3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">AI Hub</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Home</span>
+            </a>
+            <a href="code-assistant.html" class="nav-item">
+                <span class="nav-icon">👨‍💻</span>
+                <span class="nav-text">Code Assistant</span>
+            </a>
+            <a href="medical-ai.html" class="nav-item active">
+                <span class="nav-icon">🏥</span>
+                <span class="nav-text">Medical AI</span>
+            </a>
+            <a href="image-creator.html" class="nav-item">
+                <span class="nav-icon">🎨</span>
+                <span class="nav-text">Image Creator</span>
+            </a>
+            <a href="ai-therapist.html" class="nav-item">
+                <span class="nav-icon">🧠</span>
+                <span class="nav-text">AI Therapist</span>
+            </a>
+            <a href="tech-news.html" class="nav-item">
+                <span class="nav-icon">📰</span>
+                <span class="nav-text">Tech News</span>
+            </a>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-switch">🌙</button>
+        </div>
+    </nav>
+
+    <div class="medical-container">
+        <div class="sidebar">
+            <div class="category-selector">
+                <h3>Symptom Category</h3>
+                <select id="symptom-select">
+                    <option value="general">General</option>
+                    <option value="headache">Headache</option>
+                    <option value="digestive">Digestive</option>
+                    <option value="respiratory">Respiratory</option>
+                    <option value="muscle">Muscle Pain</option>
+                    <option value="skin">Skin Issues</option>
+                </select>
+            </div>
+            <div class="chat-history">
+                <h3>Recent Questions</h3>
+                <ul id="history-list"></ul>
+                <button id="clear-history" class="clear-btn">
+                    <i class="fas fa-trash"></i> Clear History
+                </button>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="medical-interface">
+                <div class="interface-header">
+                    <h2>Medical Assistant</h2>
+                    <div class="view-toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="detail-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="toggle-label">Detailed Explanation</span>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chat-messages"></div>
+                
+                <form id="medical-form" class="input-container">
+                    <button type="button" class="upload-button" id="photo-upload-btn">
+                        <i class="fas fa-image"></i>
+                    </button>
+                    <input type="file" id="photo-input" accept="image/*" style="display: none;">
+                    <textarea 
+                        id="medical-input" 
+                        placeholder="Describe your symptoms or ask a medical question..."
+                        rows="1"
+                    ></textarea>
+                    <button type="submit" class="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AI Hub</h3>
+                <p>Empowering users with AI-powered tools for better health and well-being.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="code-assistant.html">Code Assistant</a></li>
+                    <li><a href="medical-ai.html">Medical AI</a></li>
+                    <li><a href="get-started.html">Get Started</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="nav-item"><i class="fab fa-github"></i></a>
+                    <a href="#" class="nav-item"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="nav-item"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/medical-ai.js"></script>
+</body>
+</html> 

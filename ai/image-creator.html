@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Creator - AI Hub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/image-creator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">AI Hub</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="code-assistant.html" class="nav-item">
+                    <span class="nav-icon">👨‍💻</span>
+                    <span class="nav-text">Code Assistant</span>
+                </a>
+                <a href="medical-ai.html" class="nav-item">
+                    <span class="nav-icon">🏥</span>
+                    <span class="nav-text">Medical AI</span>
+                </a>
+                <a href="image-creator.html" class="nav-item active">
+                    <span class="nav-icon">🎨</span>
+                    <span class="nav-text">Image Creator</span>
+                </a>
+                <a href="ai-therapist.html" class="nav-item">
+                    <span class="nav-icon">🧠</span>
+                    <span class="nav-text">AI Therapist</span>
+                </a>
+                <a href="tech-news.html" class="nav-item">
+                    <span class="nav-icon">📰</span>
+                    <span class="nav-text">Tech News</span>
+                </a>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-switch">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="image-creator-container">
+            <div class="main-content">
+                <div class="prompt-section">
+                    <h2>Create Your Image</h2>
+                    <div class="prompt-input-container">
+                        <textarea id="prompt-input" placeholder="Describe the image you want to create... Be as detailed as possible."></textarea>
+                    </div>
+                    <div class="prompt-controls">
+                        <div class="style-select-container">
+                            <select id="style-select">
+                                <option value="realistic">Realistic Photo</option>
+                                <option value="artistic">Artistic</option>
+                                <option value="anime">Anime Style</option>
+                                <option value="digital-art">Digital Art</option>
+                                <option value="oil-painting">Oil Painting</option>
+                                <option value="watercolor">Watercolor</option>
+                                <option value="sketch">Pencil Sketch</option>
+                                <option value="3d">3D Render</option>
+                            </select>
+                        </div>
+                        <button id="generate-btn" class="generate-btn" disabled>
+                            <i class="fas fa-wand-magic-sparkles"></i> Generate
+                        </button>
+                    </div>
+                </div>
+
+                <div class="result-section">
+                    <div id="loading" class="loading hidden">
+                        <div class="spinner"></div>
+                        <p>Creating your masterpiece...</p>
+                    </div>
+                    <div id="image-result" class="image-result hidden">
+                        <img id="generated-image" src="" alt="">
+                        <div class="image-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-rotate-right"></i> Regenerate
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-wand-magic-sparkles"></i> Variations
+                            </button>
+                            <button id="download-btn" class="action-btn primary">
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <h3>Your Gallery</h3>
+                <div id="gallery-grid" class="gallery-grid">
+                    <!-- Gallery items will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="error-container" class="hidden"></div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AI Hub</h3>
+                <p>Your gateway to AI-powered tools and services</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/image-creator.js"></script>
+</body>
+</html> 

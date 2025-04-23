@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Therapist - AI Hub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/ai-therapist.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">AI Hub</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="code-assistant.html" class="nav-item">
+                    <span class="nav-icon">👨‍💻</span>
+                    <span class="nav-text">Code Assistant</span>
+                </a>
+                <a href="medical-ai.html" class="nav-item">
+                    <span class="nav-icon">🏥</span>
+                    <span class="nav-text">Medical AI</span>
+                </a>
+                <a href="image-creator.html" class="nav-item">
+                    <span class="nav-icon">🎨</span>
+                    <span class="nav-text">Image Creator</span>
+                </a>
+                <a href="ai-therapist.html" class="nav-item active">
+                    <span class="nav-icon">🧠</span>
+                    <span class="nav-text">AI Therapist</span>
+                </a>
+                <a href="tech-news.html" class="nav-item">
+                    <span class="nav-icon">📰</span>
+                    <span class="nav-text">Tech News</span>
+                </a>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-switch">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="therapist-container">
+            <div class="sidebar">
+                <div class="mood-tracker">
+                    <h3>How are you feeling?</h3>
+                    <div class="mood-options">
+                        <button class="mood-btn" data-mood="happy">😊</button>
+                        <button class="mood-btn" data-mood="neutral">😐</button>
+                        <button class="mood-btn" data-mood="sad">😔</button>
+                        <button class="mood-btn" data-mood="anxious">😰</button>
+                        <button class="mood-btn" data-mood="angry">😠</button>
+                        <button class="mood-btn" data-mood="tired">😴</button>
+                    </div>
+                </div>
+                <div class="conversation-history">
+                    <h3>Previous Sessions</h3>
+                    <ul class="history-list" id="history-list"></ul>
+                </div>
+            </div>
+
+            <div class="chat-section">
+                <div class="chat-header">
+                    <h2>AI Therapist</h2>
+                    <p>A safe space to share your thoughts and feelings</p>
+                </div>
+
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message assistant">
+                        <div class="message-content">
+                            Hello! I'm here to listen and support you. How are you feeling today?
+                        </div>
+                        <div class="message-time">Just now</div>
+                    </div>
+                </div>
+
+                <form id="chat-form" class="chat-input">
+                    <textarea 
+                        id="user-input" 
+                        placeholder="Type your message here..." 
+                        rows="1"
+                    ></textarea>
+                    <button type="submit" id="send-message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+
+                <div class="chat-footer">
+                    <p class="disclaimer">
+                        Note: This is an AI assistant and not a replacement for professional mental health care. 
+                        If you're experiencing serious issues, please seek help from a qualified mental health professional.
+                    </p>
+                    <div class="emergency-contacts">
+                        <strong>Emergency Contacts:</strong>
+                        <a href="tel:988">988 - Suicide & Crisis Lifeline</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AI Hub</h3>
+                <p>Your gateway to AI-powered tools and services</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#privacy">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/ai-therapist.js"></script>
+</body>
+</html> 

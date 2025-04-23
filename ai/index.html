@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hub - Your Gateway to Artificial Intelligence</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/privacy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Import model-viewer component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">AI Hub</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item active">Home</a>
+                <a href="code-assistant.html" class="nav-item">Code Assistant</a>
+                <a href="medical-ai.html" class="nav-item">Medical AI</a>
+                <a href="image-creator.html" class="nav-item">Image Creator</a>
+                <a href="ai-therapist.html" class="nav-item">AI Therapist</a>
+                <a href="tech-news.html" class="nav-item">Tech News</a>
+                <div id="authButtons">
+                    <a href="#" class="nav-item" id="logoutButton" style="display: none;" onclick="auth.logout(); return false;">Logout</a>
+                </div>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-switch">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="video-background">
+                <video class="hero-video" autoplay muted loop playsinline>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-content">
+                <h1>Welcome to the Future of AI</h1>
+                <p>Experience the power of artificial intelligence with our suite of advanced tools and services.</p>
+                <div class="hero-cta">
+                    <a href="get-started.html" class="cta-button primary">
+                        <i class="fas fa-rocket"></i> Get Started
+                    </a>
+                    <a href="get-started.html#how-it-works" class="cta-button secondary">
+                        <i class="fas fa-play"></i> Watch Demo
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="neural-network">
+                    <!-- Neural network animation will be added via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AI Hub</h3>
+                <p>Your gateway to AI-powered tools and services</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/home.js"></script>
+    <script>
+        // Update auth buttons on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoutButton = document.getElementById('logoutButton');
+            const user = localStorage.getItem('user');
+            
+            if (user) {
+                logoutButton.style.display = 'inline-block';
+            } else {
+                logoutButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 

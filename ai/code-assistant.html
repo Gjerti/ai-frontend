@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Assistant</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/code-assistant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="videos/video2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">AI Hub</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Home</span>
+            </a>
+            <a href="code-assistant.html" class="nav-item active">
+                <span class="nav-icon">👨‍💻</span>
+                <span class="nav-text">Code Assistant</span>
+            </a>
+            <a href="medical-ai.html" class="nav-item">
+                <span class="nav-icon">🏥</span>
+                <span class="nav-text">Medical AI</span>
+            </a>
+            <a href="image-creator.html" class="nav-item">
+                <span class="nav-icon">🎨</span>
+                <span class="nav-text">Image Creator</span>
+            </a>
+            <a href="ai-therapist.html" class="nav-item">
+                <span class="nav-icon">🧠</span>
+                <span class="nav-text">AI Therapist</span>
+            </a>
+            <a href="tech-news.html" class="nav-item">
+                <span class="nav-icon">📰</span>
+                <span class="nav-text">Tech News</span>
+            </a>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-switch">🌙</button>
+        </div>
+    </nav>
+
+    <div class="code-assistant-container">
+        <div class="sidebar">
+            <div class="language-selector">
+                <h3>Language</h3>
+                <select id="language-select">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                    <option value="ruby">Ruby</option>
+                </select>
+            </div>
+            <div class="chat-history">
+                <h3>History</h3>
+                <ul id="history-list"></ul>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="code-editor">
+                <div class="editor-header">
+                    <h2>Code Editor</h2>
+                    <div class="editor-actions">
+                        <button id="run-code">
+                            <i class="fas fa-play"></i> Run Code
+                        </button>
+                        <button id="clear-code">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                    </div>
+                </div>
+                <div class="editor-container">
+                    <div class="line-numbers"></div>
+                    <textarea id="code-input" spellcheck="false" placeholder="// Write your code here..."></textarea>
+                </div>
+                <div id="error-container" class="error-container hidden"></div>
+                <div class="output-container">
+                    <h3>Output</h3>
+                    <pre id="code-output"></pre>
+                </div>
+            </div>
+            
+            <div class="chat-interface">
+                <div class="chat-messages" id="chat-messages"></div>
+                <form id="chat-form" class="chat-input-container">
+                    <textarea 
+                        id="chat-input" 
+                        placeholder="Ask me about your code..."
+                        rows="1"
+                    ></textarea>
+                    <button type="submit" class="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AI Hub</h3>
+                <p>Empowering developers with AI-powered tools for better coding and creativity.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="code-assistant.html">Code Assistant</a></li>
+                    <li><a href="image-creator.html">Image Creator</a></li>
+                    <li><a href="get-started.html">Get Started</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="nav-item"><i class="fab fa-github"></i></a>
+                    <a href="#" class="nav-item"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="nav-item"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AI Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-ruby.min.js"></script>
+    <script src="js/code-assistant.js"></script>
+</body>
+</html> 
